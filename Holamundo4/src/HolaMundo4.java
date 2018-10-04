@@ -12,19 +12,17 @@ class HolaMundo4{
 	while(num < 20){
 		System.out.println("Hola " + nombre);
 		num = num + 1; 	
-	try
-	{
+	try{
 	BufferedWriter bw = new BufferedWriter(
 	new FileWriter(new File("fichero.txt")));
 		for(int i = 0; i < 20; i++){
 
-		bw.write("Hola " + nombre);;
+		bw.write("Hola " + nombre);
 		bw.newLine();
 		}
 	bw.close();
 	}
-	catch (IOException errorDeFichero)
-	{
+	catch (IOException errorDeFichero){
 	System.out.println(
 	"Ha habido problemas: " + errorDeFichero.getMessage() );
 	}

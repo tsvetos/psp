@@ -1,8 +1,9 @@
+import java.io.File;
 import java.io.IOException;
 
 import java.util.Arrays;
 
-public class RunProcess {
+public class EjemploProcessBuilder2 {
 	public static void main(String[] args) throws IOException {
 		//Si no hay un programa a ejecutar pasado como parametro avisamos.
 		if (args.length <= 0) {
@@ -10,13 +11,17 @@ public class RunProcess {
 			System.exit(-1);
 		}
 		//Creamos objeto ProcessBuilder pasando como parametro el comando.
-		ProcessBuilder pb = new ProcessBuilder(args);
 		
+		ProcessBuilder pb = new ProcessBuilder(args);
+		pb.directory(new File("/home/tsvtsv/eclipse-workspace/EjemploProcessBuilder/bin"));
+
 		//Ejecutamos el proceso.
 		try {
-			Process process = pb.start();
+			Process p = pb.start();
+			
 			//Espera a que el proceso lanzado termine.
-			int retorno = process.waitFor();
+			int retorno = p.waitFor();
+			
 			//Informamos sobre el resultado.
 			System.out.println("La ejecución de " + Arrays.toString(args) + " devuelve " + retorno);
 		} catch (IOException ex) {
