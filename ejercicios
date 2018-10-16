@@ -1,0 +1,24 @@
+Ejercicios realizados en el tema de procesos:
+• Repaso java: Holamundo1, 2, 3 y 4.
+• Pruebas del comando ps y pstree, administrador de procesos de Chrome (PID de cada pestaña
+abierta) y Holamundo4 (PID hijo de PID Eclipse)
+• Prueba processbuilder EjemploProcess1: Creación de proceso con processbuilder y llamada a
+gedit.
+• Prueba runtime Ejemplo2: Creación de proceso con runtime.exec y terminación del proceso
+usando process.destroy al pulsar una tecla.
+• EjemploProcess3: clase que lanza el proceso "java ejemplo1 gedit". Previamente establecemos el
+directorio de trabajo
+
+• EjemploStream1: clase que lanza Holamundo1 y muestra la salida del proceso por consola
+
+• EjemploStream2: Clase que lanza "ls -z" y muestra su salida std y su salida err
+
+• EjemploStream3: clase que lanza el comando passwd, escribe una contraseña incorrecta en el
+proceso creado y muestra en la consola la salida estándar y la salida de error del proceso.
+
+• EjemploStream4: clase que lanza Holamundo4, escribe un nombre en el proceso creado y
+muestra en la consola la salida estándar y la salida de error del proceso. Comprobar la salida de
+error que se genera cuando no es posible escribir el fichero de destino.
+• Ejercicio propuesto: clase que lanza los procesos ls -a y tr "d" "D", conecta la salida del primero
+con la entrada del segundo y muestra por consola la salida del segundo. Equivalente a ejecutar ls -
+a | tr "d" "D"
